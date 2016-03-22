@@ -1,3 +1,6 @@
+-------------------------------------------------------------------------------------------------------------------------------
+Action Plan is also uploaded as pdf in the current directory.
+-------------------------------------------------------------------------------------------------------------------------------
 1. FrequencyPatterns.java file contains the implementation of obtaining frequent patterns from any kind of file.
    Functionalities of this function include
    a) Taking any kind of file as input to the FrequencyPatterns.java
