@@ -338,7 +338,8 @@ abstract class CommandWithDestination extends FsCommand {
       in = src.fs.open(src.path);
       copyStreamToTarget(in, target);
       EnhancedMetaDataGenerator emg=new EnhancedMetaDataGenerator();
-      emg.main();
+      String input=src.toString()+target.toString();
+      emg.run(input);
       preserveAttributes(src, target, preserveRawXattrs);
     } finally {
       IOUtils.closeStream(in);
