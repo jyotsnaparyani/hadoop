@@ -17,7 +17,7 @@
  */
 
 package org.apache.hadoop.fs.shell;
-
+import edu.okstate.cs.EHL.EnhancedMetaDataGenerator.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -337,6 +337,8 @@ abstract class CommandWithDestination extends FsCommand {
     try {
       in = src.fs.open(src.path);
       copyStreamToTarget(in, target);
+      EnhancedMetaDataGenerator emg=new EnhancedMetaDataGenerator();
+      emg.main();
       preserveAttributes(src, target, preserveRawXattrs);
     } finally {
       IOUtils.closeStream(in);
