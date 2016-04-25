@@ -5,10 +5,10 @@ import java.net.URISyntaxException;
 
 public class EnhancedMetaDataGenerator 
 {
-	public static String output=null;
-	public static void main(String[] args)
+	public  String output=null;
+	public void run(String inputPath)
 	{
-		String inputPath=args[0];
+		//String inputPath=args[0];
 		output="/EMGoutput";
 		FrequentPatterns fr=new FrequentPatterns();
 		DataSetType func2=new DataSetType();
