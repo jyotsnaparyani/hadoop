@@ -17,7 +17,7 @@
  */
 
 package org.apache.hadoop.fs.shell;
-
+import edu.okstate.cs.EHL.EnhancedMetaDataGenerator.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -151,6 +151,8 @@ class Delete {
       if (!skipTrash) {
         try {
           success = Trash.moveToAppropriateTrash(item.fs, item.path, getConf());
+          DeleteMetaData del=new DeleteMetaData();
+          del.deleteMeta(item.toString());
         } catch(FileNotFoundException fnfe) {
           throw fnfe;
         } catch (IOException ioe) {
